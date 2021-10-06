@@ -1,0 +1,72 @@
+<div class="body-content" id="bodycontent">
+  <div class="row">
+    <div class="col-lg-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Customer Data<small class="float-right">
+              <button type="button" class="btn btn-primary btn-md mr-1" (click)="addUser()" data-target=""
+                data-toggle="modal">
+                <i class="ti-plus" aria-hidden="true"></i>
+                Add New Customer</button>
+            </small></h4>
+        </div>
+        <div class="card-body">
+          <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="row">
+              <div class="col-sm-12 col-md-6"></div>
+              <div class="col-lg-6 col-md-12"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <table
+                  class="table display table-bordered table-striped table-hover bg-white m-0 card-table dataTable no-footer"
+                  id="DataTables_Table_0" role="grid">
+                  <thead>
+                    <tr role="row">
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Phone </th>
+                      <!-- <th scope="col"> Number of Passengers </th> -->
+                      <th scope="col"> Address</th>
+                      <th scope="col">City</th>
+                      <th scope="col">Vehicle</th>
+                      <th scope="col">Rental Start Date</th>
+                      <th scope="col">Rental Start Time</th>
+                      <th scope="col">Pick Up Point</th>
+                      <th scope="col">Designation</th>
+                      <th scope="col">Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let x of list">
+                      <td>{{x.firstName}}</td>
+                      <td>{{x.email}}</td>
+                      <td>{{x.phone}}</td>
+                      <!-- <td>{{x.numberOfPassenger}}</td> -->
+                      <td>{{x.contactAddress1}}</td>
+                      <td>{{x.city}}</td>
+                      <td>{{x.vehicle}}</td>
+                      <td>{{x.pickUpDate}}</td>
+                      <td>{{x.pickUpTime}}</td>
+                      <td>{{x.pickUpPointAddress1}}</td>
+                      <td>{{x.designationAddress1}}</td>
+                      <td>{{x.note}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-5"></div>
+              <div class="col-sm-12 col-md-7"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

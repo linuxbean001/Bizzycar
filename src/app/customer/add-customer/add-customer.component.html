@@ -1,0 +1,485 @@
+<div id="add0" class="modal fade bd-example-modal-xl show" role="dialog" style="padding-right: 17px; display: block;"
+  aria-modal="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <b>Add Customer</b>
+        <button type="button" 
+          class="close" 
+          data-dismiss="modal" 
+          (click)="closeModal()">×
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                Add Customer 
+              </div>
+              <div class="card-body">
+                <form [formGroup]="form" accept-charset="utf-8">
+                  <input type="hidden" name="id" value="">
+                  <!-- <div class="form-group">
+                    <label for="formGroupExampleInput" 
+                      class="col-sm-3 col-form-label p-0 mb-1">Name
+                    </label>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <input type="text" 
+                          class="form-control" 
+                          id="formGroupExampleInput" 
+                          formControlName="firstName"
+                          placeholder="First Name">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" 
+                          class="form-control" 
+                          id="formGroupExampleInput" 
+                          formControlName="lastName"
+                          placeholder="Last Name">
+                      </div>
+                    </div>
+                  </div> -->
+
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="formGroupExampleInput" 
+                        class=" col-form-label">First Name
+                      </label>                     
+                      <input type="text" 
+                        class="form-control" 
+                        id="formGroupExampleInput" 
+                        formControlName="firstName"
+                        placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="formGroupExampleInput" 
+                      class=" col-form-label">Last Name
+                    </label> 
+                      <input type="text" 
+                        class="form-control" 
+                        id="formGroupExampleInput" 
+                        formControlName="lastName"
+                        placeholder="Last Name">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" 
+                        class="form-control" 
+                        id="inputEmail4" 
+                        placeholder="Email"
+                        formControlName="email">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Phone</label>
+                      <input type="number" 
+                        class="form-control" 
+                        id="formGroupExampleInput" 
+                        formControlName="phone"
+                        placeholder="Phone">                    
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Number of Passengers</label>
+                    <input type="text" 
+                      class="form-control" 
+                      formControlName="numberOfPassenger"
+                      id="formGroupExampleInput">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Contact Address</label>
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      id="formGroupExampleInput"
+                      formControlName="contactAddress1" 
+                      placeholder="Contact Address Line1">
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      id="formGroupExampleInput"
+                      formControlName="contactAddress2" 
+                      placeholder="Contact Address Line2">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          class="form-control mb-2" 
+                          formControlName="city" 
+                          placeholder="City">
+                      </div>
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="region" 
+                          class="form-control mb-2" 
+                          placeholder="Region">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="pinCode" 
+                          class="form-control mb-1"
+                          placeholder="Postal/ZipCode">
+                      </div>
+                      <div class="col">
+                        <select class="form-control" 
+                          id="exampleFormControlSelect1" 
+                          placeholder="State"
+                          formControlName="state">
+                          <option value="">select country</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AX">Aland Islands</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="BN">Brunei Darussalam</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Vehicle
+                    </label>
+                    <div class="col-sm-9">
+                      <div class="form-check">
+                        <input class="form-check-input" 
+                          type="radio" 
+                          name="vehicle" 
+                          formControlName="vehicle"
+                          id="exampleRadios1" 
+                          value="Hyundai Model A">
+                        <label class="form-check-label" 
+                          for="exampleRadios1">
+                          Hyundai Model A
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" 
+                          type="radio" 
+                          name="vehicle" 
+                          formControlName="vehicle"
+                          id="exampleRadios2" 
+                          value="Toyota Model B">
+                        <label class="form-check-label" 
+                          for="exampleRadios2">
+                          Toyota Model B
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" 
+                          type="radio" 
+                          name="vehicle" 
+                          formControlName="vehicle"
+                          id="exampleRadios3" 
+                          value="option3">
+                        <label class="form-check-label" 
+                          for="exampleRadios3">
+                          SUV (6-7 person)
+                        </label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" 
+                          type="radio" 
+                          name="vehicle" 
+                          formControlName="vehicle"
+                          id="exampleRadios3" 
+                          value="option3">
+                        <label class="form-check-label" 
+                          for="exampleRadios3">
+                          Van (12-15 person)
+                        </label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" 
+                          type="radio" 
+                          name="vehicle" 
+                          formControlName="vehicle"
+                          id="exampleRadios3" 
+                          value="option3">
+                        <label class="form-check-label" 
+                          for="exampleRadios3">
+                          Nissan Urvan (12 seat van)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Rental Start Date</label>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input class="form-control" 
+                          formControlName="pickUpDate" 
+                          placeholder="yyyy-mm-dd"
+                          name="d" 
+                          ngbDatepicker 
+                          #d="ngbDatepicker">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" 
+                            (click)="d.toggle()"
+                            type="button">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Rental Start Time</label>
+                    <!-- <input type="text" 
+                      class="form-control" 
+                      formControlName="pickUpTime" 
+                      id="formGroupExampleInput"
+                      placeholder="hh-mm"> -->
+                      <ngb-timepicker formControlName="pickUpTime"></ngb-timepicker>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Rental End Date</label>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input class="form-control" 
+                          formControlName="rentalEndDate" 
+                          placeholder="yyyy-mm-dd"
+                          name="d" 
+                          ngbDatepicker 
+                          #d1="ngbDatepicker">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" 
+                            (click)="d1.toggle()"
+                            type="button">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Rental End Time</label>
+                      <ngb-timepicker formControlName="rentalEndTime"></ngb-timepicker>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="formGroupExampleInput">Pick Up Point</label>
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      formControlName="pickUpPointAddress1"
+                      id="formGroupExampleInput" 
+                      placeholder="Street Address Line 1">
+
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      formControlName="pickUpPointAddress2"
+                      id="formGroupExampleInput" 
+                      placeholder="Street Address Line 2">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="pickUpPointCity" 
+                          class="form-control mb-2"
+                          placeholder="City">
+                      </div>
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="pickUpPointRegion" 
+                          class="form-control mb-2"
+                          placeholder="Region">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="pickUpPointPostalCode" 
+                          class="form-control mb-2"
+                          placeholder="Postal/ZipCode">
+                      </div>
+                      <div class="col">
+                        <select class="form-control" 
+                          formControlName="pickUpPointState" 
+                          id="exampleFormControlSelect1">
+                          <option value="">select country</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AX">Aland Islands</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="BN">Brunei Darussalam</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Designation</label>
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      formControlName="designationAddress1"
+                      id="formGroupExampleInput" 
+                      placeholder="Street Address Line 1">
+                    <input type="text" 
+                      class="form-control mb-2" 
+                      formControlName="designationAddress2"
+                      id="formGroupExampleInput" 
+                      placeholder="Street Address Line 2">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="designationCity" 
+                          class="form-control mb-2"
+                          placeholder="City">
+                      </div>
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="designationRegion" 
+                          class="form-control mb-2"
+                          placeholder="Region">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" 
+                          formControlName="designationPostalCode" 
+                          class="form-control mb-2"
+                          placeholder="Postal/ZipCode">
+                      </div>
+                      <div class="col">
+                        <select class="form-control" 
+                          formControlName="designationState" 
+                          id="exampleFormControlSelect1">
+                          <option value="">select country</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AX">Aland Islands</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="BN">Brunei Darussalam</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Note</label>
+                    <textarea class="form-control" 
+                      formControlName="note" 
+                      id="exampleFormControlTextarea1"
+                      rows="3">
+                    </textarea>
+                  </div>
+                  <div class="form-group text-right">
+                    <button id="disabledmode" 
+                      type="submit" 
+                      (click)="save()"  
+                      
+                      class="btn btn-success w-md m-b-5">Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,447 @@
+<div class="body-content" id="bodycontent">
+  <div id="add0" class="modal fade bd-example-modal-lg" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Add Driver</strong>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+          <form action="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/create_driver" id="emp_form"
+            class="row" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <div class="col-md-12 col-lg-6">
+              <div class="form-group row">
+                <label for="driver_name" class="col-sm-5 col-form-label">Driver Name <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="driver_name" required="" class="form-control" type="text" placeholder="Driver Name"
+                    id="driver_name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="license_number" class="col-sm-5 col-form-label">License Number <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="license_number" required="" class="form-control" type="text" placeholder="License Number"
+                    id="license_number">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="national_id" class="col-sm-5 col-form-label">National ID <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="national_id" required="" class="form-control" type="number" placeholder="National ID"
+                    id="national_id">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="timeslot" required="" class="col-sm-5 col-form-label">Working Time Slot <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="timeslot" required="" class="form-control" type="text" placeholder="10:00AM-6:00PM"
+                    id="timeslot">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="dob" class="col-sm-5 col-form-label">Date of Birth </label>
+                <div class="col-sm-7">
+                  <input name="dob" autocomplete="off" class="form-control newdatetimepicker" type="text"
+                    placeholder="Date of Birth" id="dob">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="present_address" class="col-sm-5 col-form-label">Present Address </label>
+                <div class="col-sm-7">
+                  <input name="present_address" class="form-control" type="text" placeholder="Present Address"
+                    id="present_address">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="checkbox2" class="col-sm-5 col-form-label">&nbsp;</label>
+                <div class="col-sm-7 checkbox checkbox-primary">
+                  <input id="checkbox2" type="checkbox" name="is_active">
+                  <label for="checkbox2">Is Active</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <div class="form-group row">
+                <label for="mobile" class="col-sm-5 col-form-label">Mobile <i class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="mobile" required="" class="form-control" type="number" placeholder="Mobile" id="mobile">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="license_type" class="col-sm-5 col-form-label">License Type <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <select class="form-control basic-single select2-hidden-accessible" required="" name="license_type"
+                    id="license_type" data-select2-id="license_type" tabindex="-1" aria-hidden="true">
+                    <option value="" selected="selected" data-select2-id="66">Please Select One
+                    </option>
+                    <option value="Normal License ">Normal License </option>
+                    <option value="iuyiyui">iuyiyui </option>
+                    <option value="zfdsfsdf">zfdsfsdf </option>
+                    <option value="zfdsfsdf">zfdsfsdf </option>
+                    <option value=" vcgfhfgy"> vcgfhfgy </option>
+                    <option value="Test License">Test License </option>
+                    <option value="PROFESSIONAL DRIVING LICENSE">PROFESSIONAL DRIVING LICENSE
+                    </option>
+                    <option value="NON PROFESSIONAL DRIVING LICENSE">NON PROFESSIONAL DRIVING
+                      LICENSE </option>
+                    <option value="LEARNER DRIVING LICENSE">LEARNER DRIVING LICENSE </option>
+                  </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    data-select2-id="65" style="width: auto;"><span class="selection"><span
+                        class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                        aria-expanded="false" tabindex="0" aria-labelledby="select2-license_type-container"><span
+                          class="select2-selection__rendered" id="select2-license_type-container" role="textbox"
+                          aria-readonly="true" title="Please Select One">Please Select
+                          One</span><span class="select2-selection__arrow" role="presentation"><b
+                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                      aria-hidden="true"></span></span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="license_issue_date" class="col-sm-5 col-form-label">License Issue Date
+                </label>
+                <div class="col-sm-7">
+                  <input name="license_issue_date" autocomplete="off" class="form-control newdatetimepicker" type="text"
+                    placeholder="License Issue Date" id="license_issue_date">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="join_date" class="col-sm-5 col-form-label">Join Date </label>
+                <div class="col-sm-7">
+                  <input name="join_date" autocomplete="off" class="form-control newdatetimepicker" type="text"
+                    placeholder="Join Date" id="join_date">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="permanent_address" class="col-sm-5 col-form-label">Permanent Address
+                </label>
+                <div class="col-sm-7">
+                  <input name="permanent_address" class="form-control" type="text" placeholder="Permanent Address"
+                    id="permanent_address">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="leavestatus" class="col-sm-5 col-form-label">Leave Status </label>
+                <div class="col-sm-7">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="statusyes" name="leavestatus" class="custom-control-input" value="1"
+                      checked="checked">
+                    <label class="custom-control-label" for="statusyes">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="statusno" name="leavestatus" class="custom-control-input" value="0">
+                    <label class="custom-control-label" for="statusno">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="picture" class="col-sm-5 col-form-label">Photograph </label>
+                <div class="col-sm-7">
+                  <input type="file" accept="image/*" name="picture" onchange="loadFile(event)">
+                </div>
+              </div>
+
+              <div class="form-group text-right">
+                <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                <button id="disabledmode" type="submit" class="btn btn-success w-md m-b-5">Add</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="edit" class="modal fade bd-example-modal-lg" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Update Driver</strong>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body editinfo">
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+
+      </div>
+
+    </div>
+
+  </div>
+  <div id="add3" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Add License Type</strong>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+          <form action="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/create_licensetype" id="emp_form"
+            class="row" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label for="license_name" class="col-sm-5 col-form-label">License Name <i
+                    class="text-danger">*</i></label>
+                <div class="col-sm-7">
+                  <input name="license_name" class="form-control" type="text" placeholder="License Name"
+                    id="license_name">
+                </div>
+              </div>
+              <div class="form-group text-right">
+                <button type="reset" class="btn btn-primary w-md m-b-5">Reset</button>
+                <button id="disabledmode" type="submit" class="btn btn-success w-md m-b-5">Add</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card mb-3">
+        <div class="card-header p-2">
+
+          <h4 class="pl-3">Driver List<small class="float-right">
+
+              <button type="button" class="btn btn-primary btn-md" data-target="#add0" data-toggle="modal"><i
+                  class="ti-plus" aria-hidden="true"></i>
+                Add Driver</button>&nbsp;
+              <button type="button" class="btn btn-primary btn-md" data-target="#add3" data-toggle="modal"><i
+                  class="ti-plus" aria-hidden="true"></i>
+                Add License Type</button>
+
+            </small></h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <div id="driverinfo_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="dataTables_length" id="driverinfo_length"><label>Show <select name="driverinfo_length"
+                        aria-controls="driverinfo" class="custom-select custom-select-sm form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select> entries</label></div>
+                  <div class="dt-buttons btn-group"> <button
+                      class="btn btn-secondary buttons-copy buttons-html5 btn-success" tabindex="0"
+                      aria-controls="driverinfo" type="button"><span>Copy</span></button> <button
+                      class="btn btn-secondary buttons-excel buttons-html5 btn-success" tabindex="0"
+                      aria-controls="driverinfo" type="button"><span>Excel</span></button> <button
+                      class="btn btn-secondary buttons-pdf buttons-html5 btn-success" tabindex="0"
+                      aria-controls="driverinfo" type="button"><span>PDF</span></button>
+                    <div class="btn-group"><button
+                        class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis btn-success"
+                        tabindex="0" aria-controls="driverinfo" type="button" aria-haspopup="true"
+                        aria-expanded="false"><span>Column
+                          visibility</span></button></div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div id="driverinfo_filter" class="dataTables_filter"><label>Search:<input type="search"
+                        class="form-control form-control-sm" placeholder="" aria-controls="driverinfo"></label></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <table id="driverinfo"
+                    class="table display table-bordered table-striped table-hover dataTable no-footer" role="grid"
+                    aria-describedby="driverinfo_info" style="width: 990px;">
+                    <thead>
+                      <tr role="row">
+                        <th class="sorting_asc" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-sort="ascending" aria-label="SL: activate to sort column descending"
+                          style="width: 26px;">SL</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="Driver Name: activate to sort column ascending" style="width: 101px;">Driver Name
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="Mobile: activate to sort column ascending" style="width: 96px;">Mobile</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="License Number: activate to sort column ascending" style="width: 128px;">License
+                          Number</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="NID: activate to sort column ascending" style="width: 76px;">NID</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="Working Time Slot: activate to sort column ascending" style="width: 149px;">
+                          Working Time Slot</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="Status: activate to sort column ascending" style="width: 56px;">Status</th>
+                        <th class="sorting" tabindex="0" aria-controls="driverinfo" rowspan="1" colspan="1"
+                          aria-label="Action: activate to sort column ascending" style="width: 62px;">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">1</td>
+                        <td>Kamal</td>
+                        <td>019213434522</td>
+                        <td>8676745945</td>
+                        <td>2147483646</td>
+                        <td>9:00AM-10:00PM</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_1"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('1')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/1"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">2</td>
+                        <td>Jaman</td>
+                        <td>019213004522</td>
+                        <td>29853908634</td>
+                        <td>2147483647</td>
+                        <td>9:00AM-10:00PM</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_2"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('2')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/2"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">3</td>
+                        <td>Manik</td>
+                        <td>027856</td>
+                        <td>235433</td>
+                        <td>235343534</td>
+                        <td>10:00-9:00</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_3"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('3')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/3"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">4</td>
+                        <td>Test Driver</td>
+                        <td>0175522554</td>
+                        <td>5425325432</td>
+                        <td>53253536</td>
+                        <td>3pm</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_4"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('4')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/4"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">5</td>
+                        <td>dgdfgfdg</td>
+                        <td>34534545</td>
+                        <td>5435435</td>
+                        <td>345435</td>
+                        <td>435435</td>
+                        <td>Inactive</td>
+                        <td><input name="url" type="hidden" id="url_8"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('8')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/8"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="even">
+                        <td class="sorting_1">6</td>
+                        <td>Motin</td>
+                        <td>023354657</td>
+                        <td>455435eeg</td>
+                        <td>1258</td>
+                        <td>9AM-6PM</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_9"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('9')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/9"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">7</td>
+                        <td>enderberth</td>
+                        <td>123123</td>
+                        <td>23123</td>
+                        <td>213123</td>
+                        <td>sadasd</td>
+                        <td>Active</td>
+                        <td><input name="url" type="hidden" id="url_10"
+                            value="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/updateintfrm">
+                          <a onclick="editinfo('10')" class="btn btn-xs btn-success btn-sm mr-1"
+                            style="cursor:pointer;color:#fff;" data-toggle="tooltip" data-placement="left"
+                            title="Update"><i class="ti-pencil"></i></a><a id="disabledmode"
+                            href="https://vmsupdate.bdtask.com/vms/empmgt/Driver_controller/delete_driver/10"
+                            onclick="return confirm('Are you sure ?') " class="btn btn-xs btn-danger btn-sm mr-1"><i
+                              class="ti-trash"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div id="driverinfo_processing" class="dataTables_processing card" style="display: none;">
+                    Processing...</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-5">
+                  <div class="dataTables_info" id="driverinfo_info" role="status" aria-live="polite">
+                    Showing 1 to 7 of 7 entries</div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                  <div class="dataTables_paginate paging_simple_numbers" id="driverinfo_paginate">
+                    <ul class="pagination">
+                      <li class="paginate_button page-item previous disabled" id="driverinfo_previous"><a href="#"
+                          aria-controls="driverinfo" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                      <li class="paginate_button page-item active"><a href="#" aria-controls="driverinfo"
+                          data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                      <li class="paginate_button page-item next disabled" id="driverinfo_next"><a href="#"
+                          aria-controls="driverinfo" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.table-responsive -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://vmsupdate.bdtask.com/vms/assets/dist/js/driver_view.js"></script>
+
+
+</div>
